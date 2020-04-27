@@ -27,6 +27,7 @@ public class SideScrollPlayerController : SideScrollPhysicsObject
         if(Input.GetButtonDown("Jump") && grounded)
         {
             velocity.y = jumpTakeOffSpeed;
+
         } else if (Input.GetButtonUp("Jump"))
         {
             if (velocity.y > 0)

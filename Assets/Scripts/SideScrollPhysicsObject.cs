@@ -8,6 +8,8 @@ public class SideScrollPhysicsObject : MonoBehaviour
     public float minGroundNormalY = 0.65f;
     public float gravityModifier = 1f;
 
+    protected bool jumping = false;
+
     protected Vector2 targetVelocity;
     protected bool grounded;
     protected Vector2 groundNormal;
@@ -50,6 +52,8 @@ public class SideScrollPhysicsObject : MonoBehaviour
         velocity.x = targetVelocity.x;
 
         grounded = false;
+
+        jumping = false;
 
         Vector2 moveAlongGround = new Vector2(groundNormal.y, -groundNormal.x);
 
